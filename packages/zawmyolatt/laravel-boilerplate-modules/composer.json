@@ -1,0 +1,48 @@
+{
+  "name": "zawmyolatt/laravel-boilerplate-modules",
+  "description": "Laravel Module management",
+  "keywords": [
+    "modules",
+    "laravel",
+    "zawmyolatt",
+    "module",
+    "rad"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Zaw Myo Latt",
+      "email": "zawmyolatt.ucsy@gmail.com",
+      "homepage": "https://zawmyolatt.github.io",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Zawmyolatt\\Modules\\": "src"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Zawmyolatt\\Modules\\Tests\\": "tests",
+      "Modules\\Recipe\\": "tests/stubs/valid/Recipe"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Zawmyolatt\\Modules\\LaravelModulesServiceProvider"
+      ],
+      "aliases": {
+        "Module": "Zawmyolatt\\Modules\\Facades\\Module"
+      }
+    }
+  },
+  "minimum-stability": "stable"
+}
